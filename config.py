@@ -8,7 +8,7 @@ class Config:
     """
     Configuration class
     """
-    FLASK_HOST = os.getenv('FLASK_RUN_HOST', "localhost")
+    FLASK_HOST = os.getenv('FLASK_RUN_HOST', "nap24back.vercel.app")
     FLASK_PORT = os.getenv('FLASK_RUN_PORT', "5000")
     CACHE_TYPE = 'SimpleCache'
     CACHE_DEFAULT_TIMEOUT = 600
