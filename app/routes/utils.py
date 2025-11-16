@@ -1,5 +1,6 @@
 from io import BytesIO
 from flask import jsonify, make_response, Response
+
 from flask_caching import Cache
 
 cache = Cache()
@@ -7,6 +8,7 @@ cache = Cache()
 
 def respond_with(data) -> Response:
     resp = jsonify(data)
+    # Keep permissive CORS; global after_request will also add fine-grained headers.
     resp.headers['Access-Control-Allow-Origin'] = "*"
     resp.headers['Access-Control-Allow-Headers'] = '*'
     return resp
@@ -20,7 +22,7 @@ def return_srt_file(data, filename) -> Response:
     resp = make_response(buffer.getvalue())
     resp.headers.update({
         "Content-Disposition": f"attachment; filename={filename}.srt",
-        "Content-Type": "application/x-subrip",
+        "Content-Type": "application/x-subrip; charset=utf-8",
         "Content-Length": str(len(data.encode("utf-8")))
     })
     return resp
