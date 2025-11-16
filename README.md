@@ -1,4 +1,4 @@
-# Napisy24 Stremio Addon
+# Napisy24 Stremio Addon by Skoruppa - test poprawek
 
 ![Version](https://img.shields.io/badge/version-0.0.4-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
