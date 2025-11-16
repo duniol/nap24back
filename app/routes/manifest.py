@@ -4,9 +4,9 @@ from .utils import respond_with
 manifest_blueprint = Blueprint('manifest', __name__)
 
 MANIFEST = {
-    'id': 'com.dun.napisy24-stremio-addon',
+    'id': 'com.dun.nap24bak-stremio-addon',
     'version': '6.6.6',
-    'name': 'NapBak24 Addon',
+    'name': 'Nap24bak Addon',
     'logo': 'https://napisy24.pl/templates/st_magazine/favicon.ico',
     'description': 'Addon for getting polish subtitles from Napisy24.pl',
     'types': ['movie', 'series'],
